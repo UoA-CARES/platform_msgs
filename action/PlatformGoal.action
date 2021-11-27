@@ -1,6 +1,7 @@
 #goal definition
 # Desired pose
-geometry_msgs/Pose target_pose
+geometry_msgs/Pose[] target_poses
+
 # End Effector ID to move to target_pose
 std_msgs/String link_id
 # Arm command
@@ -11,9 +12,9 @@ std_msgs/String link_id
 # 3 Actuate - e.g. prune/pick/thin
 # n - 255 reserved for future use
 uint8 command
-#0 normal
-#1 without rotation
-uint8 move_mode
+
+bool cartesian_path
+
 ---
 #result definition
 uint8 status
